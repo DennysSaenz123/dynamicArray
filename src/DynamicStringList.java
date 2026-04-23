@@ -70,8 +70,12 @@ public class DynamicStringList implements StringList {
         return size;
     }
 
+   /**
+   * Returns the current capacity of the list (i.e., the number of elements it can hold before resizing).
+   *
+   * @return the capacity of the list.
+   */
     public int capacity() {
         return array.length;
     }
-
 }
