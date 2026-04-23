@@ -24,7 +24,10 @@ class TestDynamicStringList {
     }
 
     // add()
+    @Test
+    void testAddElement() {
 
+    }
     // remove()
     @Test
     void testRemoveWithThreeElements() {
@@ -38,6 +41,12 @@ class TestDynamicStringList {
     }
 
     // size()
+    @Test
+    void testGetSize() {
+    }
 
     // capacity()
+    @Test
+    void testGetCapacity() {
+    }
 }
