@@ -4,7 +4,7 @@ import static org.junit.jupiter.api.Assertions.*;
 class TestDynamicStringList {
     // get()
     @Test
-    void TestGetWithThreeElements() {
+    void testGetWithThreeElements() {
         DynamicStringList list = new DynamicStringList();
         list.add("Hello");
         list.add("World");
