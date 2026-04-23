@@ -67,6 +67,12 @@ class TestDynamicStringList {
     // capacity()
     @Test
     void testGetCapacity() {
+        //Arrange
+        DynamicStringList list = new DynamicStringList();
+        //Act
+        int actual = list.capacity();
 
+        //
+        assertEquals(10,actual);
     }
 }
