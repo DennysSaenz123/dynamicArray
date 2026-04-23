@@ -26,6 +26,18 @@ class TestDynamicStringList {
     // add()
     @Test
     void testAddElement() {
+        //Arrange
+        DynamicStringList list = new DynamicStringList();
+        //Act
+        list.add("A");
+        list.add("B");
+        list.add("C");
+        int actual = list.size();
+
+        //
+        assertEquals(3,actual);
+    
+
 
     }
     // remove()
