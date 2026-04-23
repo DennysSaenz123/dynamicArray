@@ -1,8 +1,11 @@
 public class DynamicStringList implements StringList {
+    // internal variables
+    // array that holds data
     private String[] array = new String[10];
+    // size of dynamic array
     private int size = 0;
 
-    /**
+   /**
    * Retrieves the string at the specified index in the list.
    *
    * @param index the index of the string to retrieve.
@@ -15,7 +18,7 @@ public class DynamicStringList implements StringList {
         return value;
     }
 
-    /**
+   /**
    * Replaces the string at the specified index with the given value.
    *
    * @param index the index of the string to replace.
@@ -27,7 +30,7 @@ public class DynamicStringList implements StringList {
         array[index] = value;
     }
 
-    /**
+   /**
    * Adds a new string to the end of the list.
    *
    * @param value the string to add to the list.
@@ -42,6 +45,13 @@ public class DynamicStringList implements StringList {
         size++;
     }
 
+   /**
+   * Removes the string at the specified index from the list.
+   *
+   * @param index the index of the string to remove.
+   * @return the string that was removed.
+   * @throws IndexOutOfBoundsException if the index is out of range (index < 0 or index >= size()).
+   */
     public String remove(int index) {
         if (index >= size || index < 0) { throw new IndexOutOfBoundsException(); }
         String removed = array[index];
@@ -49,11 +59,15 @@ public class DynamicStringList implements StringList {
         size--;
         array[size] = "";
         return removed;
-        
     }
 
+   /**
+   * Returns the number of strings currently in the list.
+   *
+   * @return the size of the list.
+   */
     public int size() {
-        return 0;
+        return size;
     }
 
     public int capacity() {
