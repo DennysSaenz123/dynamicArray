@@ -36,9 +36,6 @@ class TestDynamicStringList {
 
         //
         assertEquals(3,actual);
-    
-
-
     }
     // remove()
     @Test
@@ -55,10 +52,21 @@ class TestDynamicStringList {
     // size()
     @Test
     void testGetSize() {
+        //Arrange
+        DynamicStringList list = new DynamicStringList();
+        //Act
+        list.add("A");
+        list.add("B");
+        list.add("C");
+        int actual = list.size();
+
+        //
+        assertEquals(3,actual);
     }
 
     // capacity()
     @Test
     void testGetCapacity() {
+
     }
 }
