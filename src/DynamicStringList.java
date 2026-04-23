@@ -71,7 +71,7 @@ public class DynamicStringList implements StringList {
     }
 
     public int capacity() {
-        return 0;
+        return array.length;
     }
 
 }
