@@ -16,7 +16,8 @@ public class DynamicStringList implements StringList {
     }
 
     public void set(int index, String value) {
-        
+        if (index >= size || index < 0) { throw new IndexOutOfBoundsException(); }
+        array[index] = value;
     }
 
     public void add(String value) {
