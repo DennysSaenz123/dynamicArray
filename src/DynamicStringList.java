@@ -44,11 +44,11 @@ public class DynamicStringList implements StringList {
 
     public String remove(int index) {
         if (index >= size || index < 0) { throw new IndexOutOfBoundsException(); }
-        for(int i = 0; i < size; i++){
-            array[index] = "";
-        }
-        String value = "";
-        return value;
+        String removed = array[index];
+        for(int i = index; i < size; i++){ array[i] = array[i + 1]; }
+        size--;
+        array[size] = "";
+        return removed;
         
     }
 
