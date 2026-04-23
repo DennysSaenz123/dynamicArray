@@ -1,5 +1,8 @@
 public class DynamicStringList implements StringList {
-    
+    private String[] array = new String[10];
+    private int size = 0;
+
+
     public String get(int index) {
         return null;
     }
