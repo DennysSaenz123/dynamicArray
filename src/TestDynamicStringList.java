@@ -26,6 +26,16 @@ class TestDynamicStringList {
     // add()
 
     // remove()
+    @Test
+    void testRemoveWithThreeElements() {
+        DynamicStringList list = new DynamicStringList();
+        list.add("aaa");
+        list.add("bbbb");
+        list.add("!");
+        String removed = list.remove(1);
+        assertEquals("bbbb", removed);
+        assertEquals(2, list.size());
+    }
 
     // size()
 
