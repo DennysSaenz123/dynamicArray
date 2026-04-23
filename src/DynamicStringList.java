@@ -19,8 +19,19 @@ public class DynamicStringList implements StringList {
         
     }
 
+    /**
+   * Adds a new string to the end of the list.
+   *
+   * @param value the string to add to the list.
+   */
     public void add(String value) {
-
+        if (size == array.length) {
+            String[] newArray = new String[size*2];
+            for (int i = 0; i < size; i++) { newArray[i] = array[i]; }
+            array = newArray;
+        }
+        array[size] = value;
+        size++;
     }
 
     public String remove(int index) {
